@@ -6,6 +6,7 @@
   --cg-grey: rgb(243, 243, 243);
   --cg-white: rgb(255, 255, 255);
   --bg-primary: #23232e;
+  --bg-main: #2e2e3e;
   --bg-secondary: #141418;
   --text-primary: #b6b6b6;
 }
@@ -182,13 +183,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-main);
+  color: rgb(243, 243, 243);
 }
 
 .page-title {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-family: Georgia;
+  color: #f8f8f8;
+  font-family: Public Sans;
 }
 
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
@@ -196,72 +200,66 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 /* CSS for portfolio grid */
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
 .project {
+  align-items: center;
+  border: 1px solid rgb(79, 192, 202);
+  border-radius: 30px;
+  border-width: 5px;
+  width: 95%;
+  margin-bottom: 30px;
+  padding: 15px;
+  transition: transform 300ms ease, background-color 900ms ease;
   display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
-
-  /* Debug border */
-  /* border: 2px solid blue; */
 }
 
-.item-link {
-  width: 70%;
-
-  /* Debug border */
-  /* border: 2px solid red; */
+.neat-image {
+  width: 300px;
+  height: 300px;
+  padding-right: 30px;
 }
 
-.project-image {
-  object-fit: cover;
+.vid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
   width: 100%;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-details {
+  height: 100%;
   display: flex;
-  background-color: var(--cg-white);
-  width: 30%;
-  height: 500px;
-  flex-shrink: 1;
-  padding: 0 20px;
-  margin: 0px;
-  line-height: 1.5;
-  overflow: scroll;
-
-  flex-direction: column;
-  text-align: center;
   justify-content: center;
-
-  /* Debug border */
-  /* border: 2px solid green; */
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
 }
 
-.project-details a {
-  color: var(--cg-black);
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 1px;
+.vid.active {
+  visibility: visible;
+  opacity: 1;
 }
 
-.project-details a:hover {
-  color: var(--cg-blue);
-  text-decoration: underline;
+.vid video {
+  position: relative;
+  max-width: 900px;
 }
 
-.project-details {
-  font-weight: lighter;
+@media (max-width: 991px) {
+  .vid video {
+    max-width: 90%;
+  }
 }
 
-.project-name {
-  font-weight: bold;
-  font-size: 20px;
+.project:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-primary);
 }
 
 /* CSS for home page */
@@ -324,10 +322,16 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 /* CSS for contact form */
 
 label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin-bottom: 8px;
   font-family: Georgia;
   font-weight: bold;
+}
+
+.last-padding {
+  padding-bottom: 400px;
 }
 
 input[type="text"],
