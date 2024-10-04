@@ -1,5 +1,6 @@
 :root {
   /* variables */
+  font-size: 16px;
   --cg-black: rgb(30, 32, 32);
   --cg-blue: rgb(36, 94, 255);
   --cg-grey: rgb(243, 243, 243);
@@ -17,6 +18,18 @@ body {
   padding: 0;
   margin: 0;
   font-family: monospace;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: mediumaquamarine;
 }
 
 /* CSS for navigation */
@@ -78,9 +91,11 @@ body {
 
 .logo a:hover {
   text-decoration: None;
+  color: green;
 }
 
 main {
+  margin-left: 5rem;
   padding: 0 20px 40px 20px;
   display: flex;
   flex-direction: column;
