@@ -15,7 +15,7 @@
         </li>
         <li>
           <a href="index.html" class="nav-link">
-            <img src="home(1).png" width="10%" />
+            <img src="home.png" width="10%" />
             <span class="link-text">HOME</span>
           </a>
         </li>
@@ -46,37 +46,79 @@
       </ul>
     </nav>
     <main>
-      <h1 class="page-title">PORTFOLIO</h1>
-      <div class="project">
-        <a href="index.html">
-          <img
-            src="homepage.png"
-            alt="Screenshot of my personal website"
-            width="50%"
-          />
-        </a>
-      </div>
-      <div class="project-details">
-        <h4>Personal Website Project</h4>
-        <p>
-          This is a website I developed as part of the Hack4Impact starter kit,
-          designed to provide a foundational experience in web development. The
-          project has been progressing smoothly, and through this process, I've
-          had the opportunity to deepen my understanding of core web
-          technologies.
-        </p>
-        <p>
-          While working on this project, I revisited and strengthened my
-          knowledge of HTML, focusing on creating well-structured and accessible
-          content. I also honed my CSS skills, paying close attention to
-          responsive design and ensuring that the site is visually appealing
-          across various devices. Additionally, I refined my usage of Git for
-          version control, reinforcing best practices like committing
-          frequently, managing branches, and collaborating effectively. Overall,
-          this project has been a great learning experience in applying the
-          fundamentals while contributing to a meaningful cause.
-        </p>
-        <a href="index.html">Learn more</a>
+      <h1 class="portfolio-title">Portfolio</h1>
+      <div class="project-container">
+          <div class="project">
+            <a href="index.html">
+              <img
+                src="homepage.png"
+                alt="Image of Website"
+                class="neat-image"
+              />
+            </a>
+            <div class="project-details">
+              <h3 class="project-name">Personal Website</h3>
+              <p class="project-description">
+                This is a website I made as a part of the Hack4Impact starter kit. While making this project, I revised my fundamentals in HTML, CSS, and git
+              </p>
+              <a href="index.html" class="button">Learn More</a>
+            </div>
+          </div>
+
+          <div class="project">
+            <a href="#" onclick="toggle();"><img src="tongue.png" class="neat-image"></a> 
+            <div class="vid">
+                <video width="320" height="240" controls>
+                    <source
+                      src="robotongue.MOV"
+                      type="video/mp4"
+                    />
+                </video>
+            </div>
+            <script type="text/javascript">
+                function toggle(){
+                    var vid= document.querySelector(".vid")
+                    vid.classList.toggle("active")
+                }
+            </script>
+            <div class="project-details">
+              <h3 class="project-name">Robotic Tongue</h3>
+              <p class="project-description">
+                Developed code for robotic tongue to move in certain positions based on anatomically
+                 accurate tongue muscle movement as an apprentice to Jeff Mielke. Coded the interface 
+                of the interactive software using HTML and CSS and supervised code for the servo control
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+              <img
+                src="UCSC.png"
+                alt="Image of example detection"
+                class="neat-image"
+              />
+            <div class="project-details">
+              <h3 class="project-name">Vocal Tract Ultrasound Detection</h3>
+              <p class="project-description">
+                Creating a Vocal Tract Ultrasound Detection Citizen Science app used to detect speech 
+                sounds using ultrasound images in the UCSC CS Lab
+              </p>
+            </div>
+          </div>
+          <div class="project">
+              <img
+                src="pi.png"
+                alt="Image of Language translator device"
+                class="neat-image"
+              />
+            <div class="project-details">
+              <p class="project-name">Language Translator Device</p>
+              <p class="project-description">
+                Created a portable Language Translator using a raspberry pi and the Google Media Translate API
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="footer"></footer>
