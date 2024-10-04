@@ -298,6 +298,13 @@ EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 /* CSS for resume page */
 
+.section {
+  background-color: var(--bg-primary);
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
 .button {
   background-color: var(--cg-black);
   border: none;
@@ -350,6 +357,12 @@ textarea {
 form {
   width: 500px;
   margin: 0 auto;
+}
+
+/* CSS for blog */
+
+.page-title-blog {
+  margin-bottom: 600px;
 }
 
 /* CSS for footer */
